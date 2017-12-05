@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>squa</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1, minimal-ui" name="viewport">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
+  	<link href='http://fonts.googleapis.com/css?family=Karla' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <script src="../js/jquery.min.js"></script>
+	<script src="../js/parser.js"></script>
+
+
+</head>
+
+<body>
+
+<nav>
+	<div class="hide">
+		<a class="navforums" href="http://www.guildportal.com/Guild.aspx?GuildID=202108&TabID=1706258">forums</a>
+	</div>
+</nav>
+
+<a href="#" onclick="stopVid()"><h1 class="fadeIn logo">murda dovez</h1></a>
+<div class="main fadeIn">
+	<div class="videoPoster js-videoPoster" id="player"></div>
+	<div class="kings fadeIn">
+		former kings of coh <br>
+		presumptive kings of city of titans<p>
+	</div>
+</div>
+<div class="intro-arrow">
+    <a href="#about">
+      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/15309/arrow.png" alt="down arrow">
+    </a>
+</div>
+
+
+
+
+<div id="content">
+	<div class="about-wrapper">
+		<div class="about" id="about">
+			<h2>about us</h2>
+			<p>
+				<b>Velocity/Murda Dovez</b>, is a top tier eSports collective of friends. With the dawn of the internet and the digital age (also known as the Age of Socom) Velocity began to take on the world in competitive eSports. Our 1-man branch in <b>Socom</b> was arguably in the top 3 most feared groups out of Sacramento. Our Monaco heist team is undeafeated. More recently the group has had great sucess in Heroes of Newerth, CS:S, CS:GO, Monaco, Dota 2, and TF2 despite not having any listable accomplishments.
+				<br><br>
+				Our crowning achievement though, is our legacy in <b>City of Heroes</b>. Undesputably the best team ever to grace the arena on the Test Server, we dominated the PvP scene for longer and more convincingly than any other. While it's been predicted that we shall once again dominate in the upcoming <b>City of Titans</b>, our place in history has already been established in Paragon City.
+				<br><br>
+			</p>
+		</div>
+		<div class="forum">
+
+			<div id="rsstitle" class="feedcontainer">
+			</div>
+		</div>
+	</div>
+	<div class="crew-wrapper" id="crew">
+		<div class="crew"><h1>the crew</h1></div>
+
+<!-- team -->
+	<div id="grid" class="grid">
+
+		<a href="/crew/hp.html" class="b">
+		    <div class="figure">
+		      <img src="../img/hp2.png" />
+		      <div class="figcaption">
+		        <h2>HP</h2>
+		        <p>Chief Engineer of Bench Thermodynamics</p>
+		      </div>
+		    </div>
+		  </a>
+		<a href="https://www.heroesofnewerth.com/heroes/view/42#hero">
+		    <div class="figure">
+		      <img src="../img/unh2.png" />
+		      <div class="figcaption">
+		        <h2>Unholy</h2>
+		        <p>Urban Outreach Program Leader</p>
+		      </div>
+		    </div>
+		  </a>
+		<a href="https://www.youtube.com/watch?v=ChE5bG6sG0U">
+		    <div class="figure">
+		      <img src="../img/moe2.png" />
+		      <div class="figcaption">
+		        <h2>Moe</h2>
+		        <p>Gender Equality Hire</p>
+		      </div>
+		    </div>
+		  </a>
+		<a href="https://soundcloud.com/danny-taylor-49/buda-xhiggy">
+		    <div class="figure">
+		      <img src="../img/xhg1.png" />
+		      <div class="figcaption">
+		        <h2>Xhiggy</h2>
+		        <p>Kinetics Improvement Project Manager</p>
+		      </div>
+		    </div>
+		</a>
+		<a href="http://www.blackpeoplemeet.com/">
+		    <div class="figure">
+		      <img src="../img/sil1.png" />
+		      <div class="figcaption">
+		        <h2>Silit</h2>
+		        <p>Senior BBall Instructor</p>
+		      </div>
+		    </div>
+		  </a>
+		  <a href="http://media1.giphy.com/media/euVwF4P2b0sus/giphy.gif">
+		    <div class="figure">
+		      <img src="../img/vin2.png" />
+		      <div class="figcaption">
+		        <h2>Vinnie</h2>
+		        <p>Director of Human Resources</p>
+		      </div>
+		    </div>
+		 </a>
+		<a href="http://oldforums.eveonline.com/?a=topic&threadID=380109">
+		    <div class="figure">
+		      <img src="../img/chin1.png" />
+		      <div class="figcaption">
+		        <h2>Chin</h2>
+		        <p>Elmo Speedrun Aficionado</p>
+		      </div>
+		    </div>
+		  </a>
+		<a href="#">
+		    <div class="figure">
+		      <img src="../img/man2.png" />
+		      <div class="figcaption">
+		        <h2>Manheim</h2>
+		        <p>Swedish Consul to Velocity</p>
+		      </div>
+		    </div>
+		  </a>
+		<a href="#">
+		    <div class="figure">
+		      <img src="../img/spo2.png" />
+		      <div class="figcaption">
+		        <h2>Spoon</h2>
+		        <p>Guild Wars Jump Puzzle Specialist</p>
+		      </div>
+		    </div>
+		  </a>
+		  <a href="#">
+		    <div class="figure">
+		      <img src="../img/hoj1.png" />
+		      <div class="figcaption">
+		        <h2>hoj</h2>
+		        <p>British Office Liaison</p>
+		      </div>
+		    </div>
+		  </a>
+		  <a href="#">
+		    <div class="figure">
+		      <img src="../img/jmil1.png" />
+		      <div class="figcaption">
+		        <h2>jmill</h2>
+		        <p>Pokemon Professor Emeritus</p>
+		      </div>
+		    </div>
+		  </a>
+		  <a href="#">
+		    <div class="figure">
+		      <img src="../img/mod1.png" />
+		      <div class="figcaption">
+		        <h2>modoom</h2>
+		        <p>Director of Sandwich Affairs</p>
+		      </div>
+		    </div>
+		  </a>
+		  <a href="#">
+		    <div class="figure">
+		      <img src="../img/deci1.png" />
+		      <div class="figcaption">
+		        <h2>decimate</h2>
+		        <p>Potential I55 LAN Winner (or Loser)</p>
+		      </div>
+		    </div>
+		  </a>
+		  <a href="#">
+		    <div class="figure">
+		      <img src="../img/pun1.png" />
+		      <div class="figcaption">
+		        <h2>pun</h2>
+		        <p>Junior GW2 WvW Correspondent</p>
+		      </div>
+		    </div>
+		  </a>
+
+</div>
+
+<div class="footer">
+	<a href="/me">/daniel</a><br>
+</div>
+</div>
+
+
+
+<!-- video script -->
+	<script>
+	  // 2. This code loads the IFrame Player API code asynchronously.
+	  var tag = document.createElement('script');
+
+	  tag.src = "https://www.youtube.com/iframe_api";
+	  var firstScriptTag = document.getElementsByTagName('script')[0];
+	  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		$(document).on('click', '.js-videoPoster', function(ev) {
+		  ev.preventDefault();
+		  var $poster = $(this);
+		  var $wrapper = $poster.closest('.js-videoWrapper');
+		  onAPI();
+		});
+
+	  // 3. This function creates an <iframe> (and YouTube player)
+	  //    after the API code downloads.
+	  var player;
+
+	  function onAPI() {
+	    player = new YT.Player('player', {
+	      height: '390',
+	      width: '640',
+	      playerVars: { 'autoplay': 1, 'controls': 1, 'showinfo':0, 'modestbranding':1},
+	      videoId: 'f3yvRf77I2U',
+	      events: {
+	        'onReady': onPlayerReady,
+	        'onStateChange': onPlayerStateChange
+	      }
+	    });
+	  }
+
+	  function onPlayerReady(event) {
+	  	event.target.setVolume(20);
+	    player.playVideo();
+	  }
+
+
+
+	  var done = false;
+	  function onPlayerStateChange(event) {
+	    if (event.data == 0) {
+	      stopVid();
+	    }
+	  }
+	  function stopVid() {
+	    player.destroy();
+	  }
+		</script>
+
+<!-- scroll-->
+	<script>
+		$(document).on("scroll", function () {
+			if ($(document).scrollTop() > 100) {
+				$("nav").addClass("unhide");
+			} else {
+				$("nav").removeClass("unhide");
+			}
+		});
+	</script>
+
+
+
+
+</body>
+</html>

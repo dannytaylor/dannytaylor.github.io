@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class=""><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="UTF-8">
+
+<link rel="icon" type="image/png" href="/img/favicon.png">
+<link href='http://fonts.googleapis.com/css?family=Roboto:300,400' rel='stylesheet' type='text/css'>
+<title>daniel taylor</title>
+
+
+<style>
+  *{
+    padding: 0px;
+  }
+
+  body{
+    background: #72C4E8;
+    color: #ECF0F1;
+    font-family: Roboto, source-sans-pro, sans-serif;
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+
+  h1 {
+    color: #ECF0F1;
+    font-weight: 300;
+  }
+  .wrap {
+    width: 550px;
+    height: 100px;
+    margin: 30px auto;
+  }
+
+  a{
+    z-index: 553;
+    position: relative;
+    display:inline;
+    margin: 3px 0;
+  }
+  a:link,
+  a:visited {
+    color: #020001;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #020001;
+  }
+
+  .hover{
+    background: #ff7;
+    width: 0px;
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+  }
+
+  .hoverwrap{
+
+    position: relative;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>daniel taylor</h1>
+   <a class="hoverme" href="mailto:dhtxhg@gmail.com">gmail</a><br>
+   <a class="hoverme" href="http://twitter.com/xhiggy">twitter</a><br>
+   <a class="hoverme" href="http://www.youtube.com/user/xhiggyd">youtube</a><br>
+   <a class="hoverme" href="http://dtay.imgur.com">imgur</a><br>
+   <a class="hoverme" href="http://github.com/dannytaylor">github</a><br>
+    <div style="height: 19px; top: 128.933px; left: 523px; width: 0px;" class="hover"></div>
+
+
+
+</div>
+<script src="../js/jquery.min.js"></script>
+<script>
+  var height;
+  $('.hoverme').hover(function () {
+      height = $(this).innerHeight();
+      $('.hover').css({ 'height': height });
+      var pos = $(this).position();
+      width = $(this).width();
+      div = $('.hover');
+      $('.hover').css({
+          top: pos.top + 2 + 'px',
+          left: pos.left - 2 + 'px'
+      });
+      $(div).stop().animate({ 'width': width + 4 }, 'fast');
+  }, function () {
+      $(div).stop().animate({ 'width': '0' }, 'fast');
+  });
+  $('.hoverme').mousedown(function () {
+      $('.hover').animate({ 'opacity': '0.5' }, 50);
+  });
+  $('.hoverme').mouseup(function () {
+      $('.hover').animate({ 'opacity': '1' }, 50);
+  });
+  //@ sourceURL=pen.js
+</script>
+</body></html>

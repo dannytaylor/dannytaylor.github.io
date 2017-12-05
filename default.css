@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo');
+
+html, body {
+	margin:0;
+	padding:0;
+	min-height: 100%;
+	background: white;
+	font-family: 'Heebo', sans-serif;
+	text-align: center;
+}
+.ad{
+	display: inline-block;
+	width: 200px;
+	margin-left: 0px;
+	padding: 44px 0 20px 0;
+	text-align:  center;
+}
+.ad img{
+	max-height: 100px;
+	width: 200px;
+}
+#content {
+	display: inline-block;
+	width: 840px;
+}
+#main {
+	width: 840px;
+	min-height: 320px;
+	text-align: center;
+	display: table;
+	margin: 0 auto;
+}
+#about{
+	text-align: left;
+	max-width: 480px;
+	padding-top: 16px;
+	display: inline-block;
+}
+.middle {
+	display: table-cell;
+	width: 640px;
+	height: 100%;
+	vertical-align: middle;
+}
+.middle img{
+	max-width: 100%;
+/*    -webkit-animation: fadein 0.4s; 
+       -moz-animation: fadein 0.4s; 
+        -ms-animation: fadein 0.4s; 
+         -o-animation: fadein 0.4s; 
+            animation: fadein 0.4s;*/
+}
+
+
+.left{
+	display: table-cell;
+	width: 100px;
+	height: 100%;
+	vertical-align: middle;
+}
+.right{
+	display: table-cell;
+	width: 100px;
+	height: 100%;
+	vertical-align: middle;
+}
+
+
+
+.nav1 {
+	background-image: url(img/nav1.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+
+.nav1a {
+	width: 100px;
+	height: 100px;
+	background-position: 0 0;
+}
+
+.nav1a:hover {
+	width: 100px;
+	height: 100px;
+	background-position: -100px 0;
+}
+
+.flipHorizontal{
+	-moz-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-ms-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+.social {
+	background-image: url(img/social.png);
+	background-repeat: no-repeat;
+	display: inline-block;
+}
+.social-tw{
+	width: 100px;
+	height: 100px;
+	background-position: 0 0;
+}
+.social-gh{
+	width: 100px;
+	height: 100px;
+	background-position: -100px 0;
+}
+.social-rss{
+	width: 100px;
+	height: 100px;
+	background-position: 0 -100px;
+}
+.social-yt{
+	width: 100px;
+	height: 100px;
+	background-position: -100px -100px;
+}
+
+.social-fwd{
+	width: 100px;
+	height: 100px;
+	background-position: 0 -200px;
+}
+.social-fwd:hover{
+	width: 100px;
+	height: 100px;
+	background-position: -100px -200px;
+}
+a {
+	color: grey;
+	text-decoration: none;
+	font-size: 16px;
+}
+a:hover {
+	color: black;
+}
+
+footer {
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	padding-top: 40px;
+	text-align: center;
+	min-height:100px;
+	max-width:640px;
+	margin:0 auto;
+}
+.dog{
+	width: 480px;
+	height:100%;
+	margin:0 auto;
+	background-image: url(img/dog.png);
+	background-repeat: no-repeat;
+	background-position: center; 
+}
+
+ .links{ 
+	display: none;
+	width:480px;
+	line-height: 1.6em;
+ }
+ .dog:hover .links{
+	display : block;
+	background: #fff;
+	height:100%;
+	width:480px;
+ }
+
+.skp {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 10px;
+	width: 100px;
+	height: 100px;
+	background-image: url(http://chilidog.faith/img/skp.png);
+}
+.skp:hover{
+	animation: play .8s steps(2) infinite;
+}
+@keyframes play {
+   from { background-position: -100px; }
+   to { background-position: -300px; }
+}
+.floatdog{
+	width: 320px;
+	height: 320px;
+	vertical-align: middle;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+
+	margin: -160px 0 0 -160px;
+
+	background-image: url('img/dog-large.png');
+	background-repeat: no-repeat;
+	background-position: center; 
+	-webkit-animation-name: Floating;
+	-webkit-animation-duration: 3s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes Floating{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 40px);}
+    to {-webkit-transform: translate(0, -0px);    }    
+}
+
+@keyframes Floating{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 40px);}
+    to {-webkit-transform: translate(0, -0px);    }    
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}

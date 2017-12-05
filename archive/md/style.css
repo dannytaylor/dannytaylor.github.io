@@ -1,0 +1,575 @@
+/* base stuff */
+	html, body {
+	  width: 100%;
+	  padding: 0;
+	  margin: 0;
+	  font-family: "Roboto", Arial, Sans-serif;
+	  -webkit-font-smoothing: subpixel-antialiased;
+	}
+
+	body {
+		background: #d1423b;
+	}
+	h1 {
+		color: #d1423b;
+		font-size: 40px;
+		font-family: "Karla", Arial, Sans-serif;
+	}
+
+	a {
+	    -webkit-transition: all .2s ease-in-out;
+	    -moz-transition: all .2s ease-in-out;
+	    transition: all .2s ease-in-out;
+	    text-decoration: none;
+	}
+
+	li, ul {
+	    list-style-type:none;
+	    padding:0px;
+	    margin:0px;
+	}
+
+	a:hover,
+	a:focus {
+	    text-decoration: none;
+	    color: #F04F39;
+	}
+
+/* header  */
+	nav {
+		position: fixed;
+		z-index: 9;
+		text-align: right;
+		top: -34px;
+		right:10px;
+		font-family: "roboto", Arial, Sans-serif;
+		font-size: 20px;
+	}
+	nav a{
+		color: #fff;
+		padding: 10px;
+		background-color: #d1423b;
+		font-family: "Karla", Arial, Sans-serif;
+	}
+	nav a:hover{
+		color: #333;
+		background-color: rgba(231, 76, 60, 0.5);
+
+	}
+
+	.unhide {
+	  height: 40px;
+	  padding-top: 50px;
+	}
+
+
+	/* Transitions */
+
+	nav, .hide{
+		-webkit-transition: all 0.2s;
+	          transition: all 0.2s;
+	}
+
+/*landing vid */
+	.main {
+		text-align: center;
+	  	z-index: 0;
+	  	position: fixed;
+	  	width: 100%;
+	  	top:0;
+	}
+
+	.logo {
+		position: fixed;
+		color: #ECF0F1;
+		font-size: 80px;
+		font-family: "Karla", Arial, Sans-serif;
+  	font-weight: 400;
+  	text-align: center;
+  	top:0;
+  	width: 100%;
+  	height: 80px;
+		letter-spacing: -4px;
+
+	}
+
+	.main h1{
+		height: 16%;
+		color: #ECF0F1;
+		font-size: 40px;
+		font-family: "roboto", Arial, Sans-serif;
+	  	font-weight: 300;
+	}
+
+	.kings{
+		width: 100%;
+		color: #ECF0F1;
+		line-height: 40px;
+		font-size: 24px;
+		font-family: "roboto", Arial, Sans-serif;
+	  	text-align: center;
+	  	font-weight: 300;
+	  	position: fixed;
+	  	top: 700px;
+	}
+
+	@media (max-height: 900px) {
+	  .kings {
+	    display: none;
+	  }
+	}
+
+/*youtube*/
+		#player{
+		    height: 540px;
+		    width: 960px;
+		    margin:0 auto;
+		    z-index: -1;
+		    position: fixed;
+		    top:20%;
+		  }
+
+
+		.videoPoster {
+		  background-image:url(../img/dove.svg);
+		  position: absolute;
+		  top: 0;
+		  right: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  margin: 0;
+		  padding: 0;
+		  cursor: pointer;
+		  border: 0;
+		  outline: none;
+		  background-position: 50% 50%;
+		  background-size: 100% 100%;
+		  background-size: cover;
+		  text-indent: -999em;
+		  overflow: hidden;
+		  opacity: 1;
+		  -webkit-transition: opacity 800ms, height 0s;
+		  -moz-transition: opacity 800ms, height 0s;
+		  transition: opacity 800ms, height 0s;
+		  -webkit-transition-delay: 0s, 0s;
+		  -moz-transition-delay: 0s, 0s;
+		  transition-delay: 0s, 0s;
+		}
+		.videoPoster:before {
+		  content: '';
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  width: 80px;
+		  height: 80px;
+		  margin: -40px 0 0 -40px;
+		  border: 5px transparent;
+		  border-radius: 100%;
+		  -webkit-transition: border-color 300ms;
+		  -moz-transition: border-color 300ms;
+		  transition: border-color 300ms;
+		}
+		.videoPoster:after {
+		  content: '';
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  width: 0;
+		  height: 0;
+		  margin: -20px 0 0 -10px;
+		  border-left: 40px solid transparent;
+		  border-top: 25px solid transparent;
+		  border-bottom: 25px solid transparent;
+		  -webkit-transition: border-color 300ms;
+		  -moz-transition: border-color 300ms;
+		  transition: border-color 300ms;
+		}
+		.videoPoster:hover:before, .videoPoster:focus:before {
+		  border-color: #d1423b;
+		}
+		.videoPoster:hover:after, .videoPoster:focus:after {
+		  border-left-color: #d1423b;
+		}
+		.videoWrapperActive .videoPoster {
+		  opacity: 0;
+		  height: 0;
+		  -webkit-transition-delay: 0s, 800ms;
+		  -moz-transition-delay: 0s, 800ms;
+		  transition-delay: 0s, 800ms;
+		}
+		@media (max-width: 960px) {
+		  #player {
+		    width: 640px;
+		    height: 360px;
+		  }
+		}
+		@media (max-width: 640px) {
+		  #player {
+		  	display: none;
+		  }
+		}
+
+/*arrow and fade*/
+	.intro-arrow {
+	  position: absolute;
+	  bottom: 3%;
+	  left: 49%;
+	  opacity: 0;
+	  -webkit-animation: fadein 1s;
+	          animation: fadein 1s;
+	  -webkit-animation-fill-mode: both;
+	          animation-fill-mode: both;
+	}
+	.intro-arrow.hidden {
+	  -webkit-animation: fadeOut 1s;
+	          animation: fadeOut 1s;
+	}
+	.intro-arrow:hover a {
+	  opacity: .7;
+	}
+
+	@-webkit-keyframes fadein {
+	  from {
+	    opacity: 0;
+	  }
+	  to {
+	    opacity: 1;
+	  }
+	}
+
+	@keyframes fadein {
+	  from {
+	    opacity: 0;
+	  }
+	  to {
+	    opacity: 1;
+	  }
+	}
+	@-webkit-keyframes fadeOut {
+	  from {
+	    opacity: 1;
+	  }
+	  to {
+	    opacity: 0;
+	    bottom: -1.5em;
+	  }
+	}
+	@keyframes fadeOut {
+	  from {
+	    opacity: 1;
+	  }
+	  to {
+	    opacity: 0;
+	    bottom: -1.5em;
+	  }
+	}
+
+	/* fade frames */
+	@keyframes fadein {
+	    from { opacity: 0; }
+	    to   { opacity: 1; }
+	}
+
+	/* Firefox < 16 */
+	@-moz-keyframes fadein {
+	    from { opacity: 0; }
+	    to   { opacity: 1; }
+	}
+
+	/* Safari, Chrome and Opera > 12.1 */
+	@-webkit-keyframes fadein {
+	    from { opacity: 0; }
+	    to   { opacity: 1; }
+	}
+
+	/* Internet Explorer */
+	@-ms-keyframes fadein {
+	    from { opacity: 0; }
+	    to   { opacity: 1; }
+	}
+
+	/* Opera < 12.1 */
+	@-o-keyframes fadein {
+	    from { opacity: 0; }
+	    to   { opacity: 1; }
+	}
+
+	.fadeIn{
+		-webkit-animation: fadein 	1s; /* Safari, Chrome and Opera > 12.1 */
+		-moz-animation: fadeIn 		1s; /* Firefox < 16 */
+		-ms-animation: fadein 		1s; /* Internet Explorer */
+		-o-animation: fadein 		1s; /* Opera < 12.1 */
+		animation: fadein 			1s;
+	}
+
+#content{
+	width: 100%;
+	position: absolute;
+	top:100%;
+	z-index: 1;
+}
+
+/*page2*/
+	.about-wrapper {
+		width: 100%;
+		background: #ECF0F1;
+		padding: 40px 0;
+		text-align: center;
+	}
+	.about{
+		max-width: 420px;
+		display: inline-block;
+		padding-right: 40px;
+	}
+
+
+	.about h2{
+		color: #72C4E8;
+		font-size: 48px;
+		font-family: "Karla", Arial, Sans-serif;
+	  	font-weight: 400;
+	}
+	.title{
+		color: #72C4E8;
+		font-size: 24px;
+		font-family: "Karla", Arial, Sans-serif;
+	  	font-weight: 400;
+	}
+	.about p{
+		color: #333;
+		line-height: 30px;
+		font-size: 16px;
+		font-family: "roboto", Arial, Sans-serif;
+	  	text-align: justify;
+	  	font-weight: 400;
+	}
+
+	.forum{
+		display: inline-block;
+		max-width: 360px;
+		padding-right: 100px;
+		position: relative;
+		top: -140px;
+	}
+
+
+	.box {
+		background-color: rgba(231, 76, 60, 1);
+		font-family: 'roboto', sans-serif;
+	 	text-transform:lowercase;
+	  	font-weight:300;
+		border-radius:2px;
+		position:relative;
+		text-align:left;
+		padding:20px;
+		font-size:16px;
+		line-height:24px;
+		color:white;
+		margin-bottom: 40px;
+		-webkit-transition: all .1s ease-in-out;
+	    -moz-transition: all .1s ease-in-out;
+	    transition: all .1s ease-in-out;
+	    background: #d1423b;
+		}
+
+	.box:after {
+		content:'';
+		position:absolute;
+	 	top:40%;
+		left:100%;
+		width:0;
+		height:0;
+		border:12px solid transparent;
+		border-left:15px solid #d1423b;
+		margin-bottom: 20px;
+	}
+
+	.box:hover{
+	  opacity: 0.8;
+
+	}
+
+	.name{
+	font-family: 'Karla', sans-serif;
+	  text-transform:uppercase;
+	  font-size:20px;
+	  margin-bottom: 20px;
+	}
+
+	@media (max-width: 960px) {
+		.about {
+			max-width: 90%;
+			padding: 20px 5% 40px 5%;
+		}
+		.forum {
+			top: 0;
+			max-width: 90%;
+			padding: 20px 5% 40px 5%;
+		}
+	}
+
+/*page3*/
+	.crew-wrapper {
+		position: relative;
+		width: 100%;
+		overflow: auto;
+		background-color: #72C4E8;
+		padding-top: 40px;
+	}
+
+	.crew{
+		text-align: center;
+		padding: 40px auto;
+		}
+
+	.crew h1{
+		color: #ECF0F1;
+			padding: 20px;
+			font-size: 48px;
+			font-family: "Karla", Arial, Sans-serif;
+			font-weight: 400;
+		}
+
+/*team*/
+
+	.figure,
+	.figure * {
+	  -webkit-box-sizing: border-box;
+	  box-sizing: border-box;
+	  -webkit-transition: 0.3s;
+	  transition: 0.3s;
+	}
+	/*---------------*/
+	/* Common style */
+
+	.grid {
+	  margin: 20px auto 120px;
+	  max-width: 960px;
+	  width: 90%;
+	}
+
+	.grid a {
+	  float: left;
+	  max-width: 400px;
+	  width: 20%;
+	  color: #333;
+	  text-decoration: none;
+	}
+
+	.grid a,
+	.grid a .figure,
+	.grid a .figcaption,
+	.grid a .figure img,
+	.grid a .figure .figbutton {}
+
+	.grid a:nth-child(odd) {
+	  margin: 0 0 0 0;
+	}
+
+	.grid a .figure {
+	  position: relative;
+	  overflow: hidden;
+	  margin: 8px;
+	  background: #333;
+	}
+
+	.grid a .figure img {
+	  position: relative;
+	  display: block;
+	  width: 100%;
+	  opacity: 1;
+	}
+
+	.grid a .figcaption {
+	  top: 0;
+	  z-index: 11;
+	  padding: 10px;
+	  width: 100%;
+	  height: 45px;
+	  text-align: center;
+	  position: absolute;
+	  background: #FFFFFF;
+	}
+
+	.grid a .figcaption h2 {
+	  margin: 0 0 20px 0;
+	  color: #d1423b;
+	  font-family: "Karla", Arial, Sans-serif;
+	  text-transform: lowercase;
+	  font-weight: 400;
+	  font-size: 20px;
+	}
+
+	.grid a .figcaption p {
+	  position: absolute;
+	  padding: 0 20px;
+	  color: #aaa;
+	  opacity: 0;
+	}
+
+	.grid a .figure .figbutton {
+	  background: #d1423b;
+	  letter-spacing: 1px;
+	  text-align: center;
+	  position: absolute;
+	  padding: 8px 20px;
+	  color: #ffffff;
+	  border: none;
+	  bottom: 0px;
+	  right: 0px;
+	  left: 0px;
+	  margin: 0;
+	  opacity: 0;
+	  line-height: 24px;
+	  font-size: 16px;
+	}
+	/* Hover effects */
+
+	.grid a:hover .figure img {
+	  opacity: 0.7;
+	}
+
+	.grid a:hover .figcaption {
+	  /* border-bottom-right-radius: 0; */
+	  /* border-bottom-left-radius: 0; */
+
+	  height: 200px;
+	}
+
+	.grid a:hover .figcaption h2 {
+	  margin: 40px 0 20px 0;
+	}
+
+	.grid a:hover .figcaption p {
+	  margin-top: 0;
+	}
+
+	.grid a:hover .figcaption p {
+	  opacity: 1;
+	}
+
+	.grid a:hover .figure .figbutton {
+	  border-top-right-radius: 0;
+	  border-top-left-radius: 0;
+	  opacity: 1;
+	}
+	/* Individual styles */
+
+
+
+.footer {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	overflow: auto;
+	text-align: right;
+	font-family: "roboto", Arial, Sans-serif;
+}
+.footer a{
+	color: #ECF0F1;
+	font-size: 20px;
+}
+.footer a:hover{
+	color: #FFDF4B;
+}
